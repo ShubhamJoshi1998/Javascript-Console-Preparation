@@ -3,7 +3,6 @@
 ## Day 1 — Hoisting
 
 Practice the following **25 JavaScript console-output questions**.
-
 Try to predict the output **before running the code**.
 
 ---
@@ -13,3 +12,321 @@ Try to predict the output **before running the code**.
 ```javascript
 console.log(a);
 var a = 10;
+```
+
+### Q2
+
+```javascript
+console.log(a);
+let a = 10;
+```
+
+### Q3
+
+```javascript
+console.log(a);
+const a = 10;
+```
+
+### Q4
+
+```javascript
+var a = 10;
+
+function test() {
+    console.log(a);
+    var a = 20;
+}
+
+test();
+```
+
+### Q5
+
+```javascript
+var a = 10;
+
+function test() {
+    console.log(a);
+}
+
+test();
+```
+
+### Q6
+
+```javascript
+foo();
+
+function foo() {
+    console.log("Hello");
+}
+```
+
+### Q7
+
+```javascript
+foo();
+
+var foo = function () {
+    console.log("Hello");
+};
+```
+
+### Q8
+
+```javascript
+foo();
+
+let foo = function () {
+    console.log("Hello");
+};
+```
+
+### Q9
+
+```javascript
+console.log(typeof foo);
+
+function foo() {}
+```
+
+### Q10
+
+```javascript
+console.log(typeof foo);
+
+var foo = function () {};
+```
+
+### Q11
+
+```javascript
+console.log(a);
+
+var a = 10;
+
+console.log(a);
+```
+
+### Q12
+
+```javascript
+var a = 10;
+
+function test() {
+    console.log(a);
+    var a = 20;
+    console.log(a);
+}
+
+test();
+```
+
+### Q13
+
+```javascript
+function test() {
+    console.log(a);
+}
+
+var a = 100;
+
+test();
+```
+
+### Q14
+
+```javascript
+test();
+
+var test = function () {
+    console.log("A");
+};
+
+function test() {
+    console.log("B");
+}
+```
+
+### Q15
+
+```javascript
+console.log(test);
+
+var test = 10;
+
+function test() {
+    console.log("function");
+}
+```
+
+### Q16
+
+```javascript
+var test = 10;
+
+function test() {
+    console.log("function");
+}
+
+console.log(test);
+```
+
+### Q17
+
+```javascript
+console.log(a);
+
+function a() {
+    return 10;
+}
+```
+
+### Q18
+
+```javascript
+var a = 10;
+
+function outer() {
+    var a = 20;
+
+    function inner() {
+        console.log(a);
+    }
+
+    inner();
+}
+
+outer();
+```
+
+### Q19
+
+```javascript
+var a = 10;
+
+function outer() {
+    console.log(a);
+
+    var a = 20;
+}
+
+outer();
+```
+
+### Q20
+
+```javascript
+function test() {
+    console.log(foo);
+
+    var foo = "bar";
+}
+
+test();
+```
+
+### Q21 ⭐
+
+```javascript
+console.log(a);
+
+var a = 1;
+
+function a() {
+    return 2;
+}
+
+console.log(a);
+```
+
+### Q22 ⭐
+
+```javascript
+foo();
+
+var foo = function () {
+    console.log("A");
+};
+
+function foo() {
+    console.log("B");
+}
+```
+
+### Q23 ⭐
+
+```javascript
+var x = 10;
+
+function test() {
+    console.log(x);
+
+    function x() {
+        return 20;
+    }
+}
+
+test();
+```
+
+### Q24 🔥
+
+```javascript
+console.log(typeof a);
+
+var a = 10;
+
+function a() {}
+
+console.log(typeof a);
+```
+
+### Q25 🔥 Interview Trap
+
+```javascript
+var x = 1;
+
+function test() {
+    console.log(x);
+
+    if (false) {
+        var x = 2;
+    }
+}
+
+test();
+```
+
+---
+
+## 🎯 Goal
+
+Before executing each question:
+
+1. Predict the output.
+2. Understand the hoisting behavior.
+3. Run the code and verify your answer.
+4. Understand **why** the output occurs.
+
+> **Don't just memorize the output — understand the execution.**
+
+---
+
+### Topics Covered
+
+* `var` hoisting
+* `let` and `const` TDZ
+* Function declaration hoisting
+* Function expression hoisting
+* Function scope
+* Variable shadowing
+* Scope chain
+* Local vs global variables
+* `typeof` with hoisted variables
+* `var` inside blocks
+* Function vs variable hoisting
+* Hoisting interview traps
+
+**Day 1 complete — Hoisting 🚀**
